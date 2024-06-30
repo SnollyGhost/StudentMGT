@@ -24,9 +24,10 @@ public class LoginRegisterApp extends JFrame implements ActionListener {
     private JLabel registerPasswordLabel;
 
     // Database connection parameters
-    private static final String DB_URL = "jdbc:mysql://localhost/student_management";
-    private static final String DB_USER = "root";
-    private static final String DB_PASSWORD = "root";
+    private static final String DB_URL = "jdbc:mysql://localhost:3306/student_management?user=root";
+    private static final String DB_USER = "root"; // This line can be removed or kept if you prefer
+
+    private static final String DB_PASSWORD = "1697";
 
     public LoginRegisterApp() {
         super("Login Page");

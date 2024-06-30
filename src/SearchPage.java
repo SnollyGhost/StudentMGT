@@ -12,9 +12,10 @@ public class SearchPage extends JFrame implements ActionListener {
     private JLabel resultLabel;
 
     // Database connection parameters
-    private static final String DB_URL = "jdbc:mysql://localhost/student_management";
-    private static final String DB_USER = "root";
-    private static final String DB_PASSWORD = "root";
+    private static final String DB_URL = "jdbc:mysql://localhost:3306/student_management?user=root";
+    private static final String DB_USER = "root"; // This line can be removed or kept if you prefer
+
+    private static final String DB_PASSWORD = "1697";
 
     public SearchPage() {
         super("Search Page");
@@ -57,10 +58,12 @@ public class SearchPage extends JFrame implements ActionListener {
         }
     }
 
-    // Database querying logic to retrieve student information based on the course code
+    // Database querying logic to retrieve student information based on the course
+    // code
     private String searchStudentByCourse(String courseCode) {
         try (Connection conn = DriverManager.getConnection(DB_URL, DB_USER, DB_PASSWORD);
-             PreparedStatement statement = conn.prepareStatement("SELECT * FROM student_results WHERE course_code = ?")) {
+                PreparedStatement statement = conn
+                        .prepareStatement("SELECT * FROM student_results WHERE course_code = ?")) {
             statement.setString(1, courseCode);
             ResultSet resultSet = statement.executeQuery();
             if (resultSet.next()) {

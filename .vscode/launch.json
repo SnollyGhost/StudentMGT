@@ -9,6 +9,20 @@
       "name": "LoginRegisterApp",
       "request": "launch",
       "mainClass": "LoginRegisterApp",
+      "projectName": "StudentMGT_79ee98cc"
+    },
+    {
+      "type": "java",
+      "name": "SearchPage",
+      "request": "launch",
+      "mainClass": "SearchPage",
+      "projectName": "StudentMGT_79ee98cc"
+    },
+    {
+      "type": "java",
+      "name": "LoginRegisterApp",
+      "request": "launch",
+      "mainClass": "LoginRegisterApp",
       "projectName": "JDCB_93b236ec"
     }
   ]
